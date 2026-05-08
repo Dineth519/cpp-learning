@@ -169,3 +169,74 @@ vector<int> scores;
     return 0;
 }
 ```
+
+## Advantages of Vectors
+- Dynamic size
+- Easy to use
+- Works well with loops
+- STL support
+
+---
+
+# String
+
+A string is an object that represents a sequence of characters. To use strings, you must include the <string> library.
+
+## Declaration and Initialization
+
+To create a string and assign it a value in several ways.
+
+```cpp
+C++
+#include <iostream>
+#include <string> // Required library
+using namespace std;
+
+int main() {
+// Basic declaration
+string greeting = "Hello";
+
+    // Concatenation (Joining strings)
+    string firstName = "Dineth";
+    string lastName = "Sanjuna";
+    string fullName = firstName + " " + lastName;
+
+    cout << fullName << endl; // Output: Dineth Sanjuna
+    return 0;
+}
+```
+
+## String Memory Layout
+A string stores characters in contiguous memory locations, ending with a null character `\0` in the background (C-style) or managed as a dynamic object in C++.
+
+## Useful String Functions
+- `length()` or `size()`: Returns the number of characters in the string.
+- `append()`: Adds a string to the end of another.
+- `substr(start, length)`: Extracts a part of the string.
+- `at(index)`: Accesses a character at a specific position safely.
+- `clear()`: Empty the string
+
+```cpp
+string text = "C++ Programming";
+
+cout << "Length: " << text.length() << endl;          // Output: 15
+cout << "Substring: " << text.substr(0, 3) << endl;  // Output: C++
+cout << "Character at 4: " << text.at(4) << endl;     // Output: P
+```
+
+## User Input with Strings
+
+Using cin only reads a single word. To read a full line (with spaces), use getline().
+
+```cpp 
+string myName;
+cout << "Enter your full name: ";
+getline(cin, myName); // Reads the whole line
+cout << "Hello, " << myName << "!";
+```
+
+## Key Points
+- Strings store text data
+- Index starts from 0
+- Strings support many built-in functions
+- Easier than character arrays
